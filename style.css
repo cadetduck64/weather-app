@@ -1,0 +1,5 @@
+#weatherDisplay {
+    display: grid;
+    flex-direction: row;
+    border: solid red;
+}
