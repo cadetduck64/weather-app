@@ -5,17 +5,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script defer src="script.js"></script>
+    <base href="/">
+    <script defer src="script.js" type="module"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <input id="weatherSearch" type="search">
+    <!-- <style>
+        body {
+            background-image:url("./background-images/rainy.jpg")
+        }
+    </style> -->
     <div id="weatherDisplay">
-        <div id='country' class="weatherDisplayInfo">asdf</div>
-        <div id='region' class="weatherDisplayInfo">asdf</div>
-        <div id='location' class="weatherDisplayInfo">asdf</div>
-        <div id='condition' class="weatherDisplayInfo">asdf</div>
-        <button id="getWeatherButton">GET WEATHER</button>
+        <div id="regionInfo">
+            <div>Country:</div>
+            <div id='country' class="weatherDisplayInfo"></div>
+            <div>Region:</div>
+            <div id='region' class="weatherDisplayInfo"></div>
+        </div>
+        
+        <div id="interactive">
+            <img id="greeting" src="" alt="">
+            <form onsubmit="event.preventDefault();" id="searchDiv">
+                <input id="weatherSearch" type="search">
+                <button type="submit" id="getWeatherButton">GET WEATHER</button>
+            </form>
+        </div>
+        <div id="weatherIcon"><img src="" alt=""></div>
+        <div id="weatherInfo">
+            <div>Location:</div>
+            <div id='location' class="weatherDisplayInfo"></div>
+            <div>Condition:</div>
+            <div id='condition' class="weatherDisplayInfo"></div>
+        </div>
+    </div>
+    <div id="quote">
+        Need to check the weather? we've got your back just type in where you want to know the weather and we'll let you know the details. we'll also give you an inspirational quote. Rain or Shine
     </div>
     
 </body>
